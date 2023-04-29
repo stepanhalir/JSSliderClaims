@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="SPŠSE a VOŠ Liberec" />
+    <title>JS MailSignature | SPŠSE a VOŠ Liberec</title>
+    <link rel="stylesheet" href="assets/css/page.css" />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="https://pslib.cz/sites/pslib.cz/images/favicon.png" />
+    <script src="./assets/js/script.js"></script>
+  </head>
+<body class="page">
+    <header class="page__header">
+      <a href="./" class="page__logo"><span>Logoipsum</span></a>
+      <h1 class="heading heading--large">Generátor mail podpisů <span class="color--primary">Logoipsum</span></h1>
+    </header>
+    <aside class="page__form">
+      <form class="mail-form">
+        <div>
+          <label for="jmeno" class="mail-form__label s">Jméno a příjmení:</label>
+          <input type="text" class="mail-form__input" id="jmeno" placeholder="Ing. John Doe" name="jmeno">
+        </div>
+        <div>
+          <label for="pozice" class="mail-form__label">Pracovní pozice:</label>
+          <input type="text" class="mail-form__input" id="pozice" placeholder="Web Developer" name="pozice">
+        </div>
+        <div>
+          <label for="divize" class="mail-form__label">Divize/oddělení:</label>
+          <input type="text" class="mail-form__input" id="divize" placeholder="Vývojové oddělení" name="divize">
+        </div>
+        <div>
+          <label for="email" class="mail-form__label">E-mail:</label>
+          <input type="email" class="mail-form__input" id="email" placeholder="jmeno.prijmeni@logoipsum.cz" name="email">
+        </div>
+        <div>
+          <label for="telefon" class="mail-form__label">Telefon:</label>
+          <input type="tel" class="mail-form__input" id="telefon" placeholder="774 200 200" name="telefon">
+        </div>
+        <div>
+          <label for="adresa" class="mail-form__label">Adresa:</label>
+          <input type="text" class="mail-form__input" id="adresa" placeholder="Masarykova 3, 460 01 Liberec 1" value="Masarykova 3, 460 01 Liberec 1" name="adresa">
+        </div>
+        <div>
+          <label for="web" class="mail-form__label">Web:</label>
+          <input type="text" class="mail-form__input" id="web" placeholder="www.logoipsum.cz" value="www.logoipsum.cz" name="web">
+        </div>
+      </form>
+    </aside>
+    <main class="page__preview" id="copy">
+        <table width="100%" id="mail-preview" border="0" cellpadding="0" cellspacing="0" style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; width: 100%; margin: 0; padding: 0;">
+          <tbody>
+            <tr style="display: inline-block; margin: 0.5em 0; font-size: 1.1em;"><td data-source="jmeno" colspan="2" style="font-weight: bold;">Ing. John Doe</td></tr>
+            <tr style="display: block; margin: 0.25em 0;"><td data-source="pozice" colspan="2">Web Developer</td></tr>
+            <tr style="display: block; margin: 0.25em 0;"><td colspan="2"><em data-source="divize">Vývojové oddělení</em></td></tr>
+            <tr style="display: block; margin: 0.25em 0;"><td colspan="2"><a data-source="email" data-type="mailto:" data-attrsource="email" href="mailto:john.doe@logoipsum.cz" style="color: #F5841F;">john.doe@logoipsum.cz</a></td></tr>
+            <tr><td colspan="2"><a data-type="tel:+420" data-attrsource="telefon" href="tel:+420774200200" style="color: #F5841F;"><span>+420</span> <span data-source="telefon">774 200 200</span></a></td></tr>
+          </tbody>
+          <tfoot style="display: block; margin-top: 1.5em; padding-top: 0.5em; font-size: 0.8em;">
+            <tr><td colspan="2"><a data-type="https://" data-attrsource="web" href="http://logoipsum.cz/" style="display: block;" target="_blank">
+              <img style="height: 3em; display: inline-block;" alt="LogoIpsum" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUzIiBoZWlnaHQ9IjM4IiB2aWV3Qm94PSIwIDAgMTUzIDM4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzFfMjI1NCkiPg0KPHBhdGggZD0iTTQ2LjY3NDEgMjYuMTc0NUg1Ny40MzA5VjIyLjkzNDVINTAuNDk3M1YxMC43MzA1SDQ2LjY3NDFWMjYuMTc0NVoiIGZpbGw9IiMzNDBFMEUiLz4NCjxwYXRoIGQ9Ik02My44MDM4IDI0LjAxNDZDNjIuMjcwMiAyNC4wMTQ2IDYxLjQ3MSAyMi42NzU0IDYxLjQ3MSAyMC42NjY2QzYxLjQ3MSAxOC42NTc4IDYyLjI3MDIgMTcuMjk3IDYzLjgwMzggMTcuMjk3QzY1LjMzNzQgMTcuMjk3IDY2LjE1ODIgMTguNjU3OCA2Ni4xNTgyIDIwLjY2NjZDNjYuMTU4MiAyMi42NzU0IDY1LjMzNzQgMjQuMDE0NiA2My44MDM4IDI0LjAxNDZaTTYzLjgyNTQgMjYuNTIwMkM2Ny4zODk0IDI2LjUyMDIgNjkuNzIyMiAyMy45OTMgNjkuNzIyMiAyMC42NjY2QzY5LjcyMjIgMTcuMzQwMiA2Ny4zODk0IDE0LjgxMyA2My44MjU0IDE0LjgxM0M2MC4yODMgMTQuODEzIDU3LjkwNyAxNy4zNDAyIDU3LjkwNyAyMC42NjY2QzU3LjkwNyAyMy45OTMgNjAuMjgzIDI2LjUyMDIgNjMuODI1NCAyNi41MjAyWiIgZmlsbD0iIzM0MEUwRSIvPg0KPHBhdGggZD0iTTc1Ljg5MTMgMjkuOTk3OUM3Ny41MzI5IDI5Ljk5NzkgNzguOTgwMSAyOS42MzA3IDc5Ljk1MjEgMjguNzY2N0M4MC44Mzc3IDI3Ljk2NzUgODEuNDIwOSAyNi43NTc5IDgxLjQyMDkgMjUuMDk0N1YxNS4xMTU1SDc4LjA1MTNWMTYuMzAzNUg3OC4wMDgxQzc3LjM2MDEgMTUuMzc0NyA3Ni4zNjY1IDE0Ljc5MTUgNzQuODk3NyAxNC43OTE1QzcyLjE1NDUgMTQuNzkxNSA3MC4yNTM3IDE3LjA4MTEgNzAuMjUzNyAyMC4zMjExQzcwLjI1MzcgMjMuNzEyMyA3Mi41NjQ5IDI1LjU2OTkgNzUuMDQ4OSAyNS41Njk5Qzc2LjM4ODEgMjUuNTY5OSA3Ny4yMzA1IDI1LjAyOTkgNzcuODc4NSAyNC4yOTU1SDc3Ljk2NDlWMjUuMzk3MUM3Ny45NjQ5IDI2LjczNjMgNzcuMzM4NSAyNy41MTM5IDc1Ljg0ODEgMjcuNTEzOUM3NC42ODE3IDI3LjUxMzkgNzQuMDk4NSAyNy4wMTcxIDczLjkwNDEgMjYuNDMzOUg3MC40OTEzQzcwLjgzNjkgMjguNzQ1MSA3Mi44NDU3IDI5Ljk5NzkgNzUuODkxMyAyOS45OTc5Wk03NS44Njk3IDIyLjk1NjNDNzQuNTUyMSAyMi45NTYzIDczLjY4ODEgMjEuODc2MyA3My42ODgxIDIwLjIxMzFDNzMuNjg4MSAxOC41MjgzIDc0LjU1MjEgMTcuNDQ4MyA3NS44Njk3IDE3LjQ0ODNDNzcuMzM4NSAxNy40NDgzIDc4LjExNjEgMTguNzAxMSA3OC4xMTYxIDIwLjE5MTVDNzguMTE2MSAyMS43NDY3IDc3LjQwMzMgMjIuOTU2MyA3NS44Njk3IDIyLjk1NjNaIiBmaWxsPSIjMzQwRTBFIi8+DQo8cGF0aCBkPSJNODguMzQ5NCAyNC4wMTQ2Qzg2LjgxNTggMjQuMDE0NiA4Ni4wMTY2IDIyLjY3NTQgODYuMDE2NiAyMC42NjY2Qzg2LjAxNjYgMTguNjU3OCA4Ni44MTU4IDE3LjI5NyA4OC4zNDk0IDE3LjI5N0M4OS44ODMgMTcuMjk3IDkwLjcwMzggMTguNjU3OCA5MC43MDM4IDIwLjY2NjZDOTAuNzAzOCAyMi42NzU0IDg5Ljg4MyAyNC4wMTQ2IDg4LjM0OTQgMjQuMDE0NlpNODguMzcxIDI2LjUyMDJDOTEuOTM1IDI2LjUyMDIgOTQuMjY3OCAyMy45OTMgOTQuMjY3OCAyMC42NjY2Qzk0LjI2NzggMTcuMzQwMiA5MS45MzUgMTQuODEzIDg4LjM3MSAxNC44MTNDODQuODI4NiAxNC44MTMgODIuNDUyNiAxNy4zNDAyIDgyLjQ1MjYgMjAuNjY2NkM4Mi40NTI2IDIzLjk5MyA4NC44Mjg2IDI2LjUyMDIgODguMzcxIDI2LjUyMDJaIiBmaWxsPSIjMzQwRTBFIi8+DQo8cGF0aCBkPSJNOTUuMjk1NyAyNi4xNzQ1SDk4LjgxNjRWMTUuMTE1M0g5NS4yOTU3VjI2LjE3NDVaTTk1LjI5NTcgMTMuNTgxN0g5OC44MTY0VjEwLjczMDVIOTUuMjk1N1YxMy41ODE3WiIgZmlsbD0iIzM0MEUwRSIvPg0KPHBhdGggZD0iTTEwMC4zNDUgMjkuODI1MUgxMDMuODY2VjI1LjAyOTlIMTAzLjkwOUMxMDQuNiAyNS45NTg3IDEwNS42MTUgMjYuNTIwMyAxMDcuMDQxIDI2LjUyMDNDMTA5LjkzNSAyNi41MjAzIDExMS44NTggMjQuMjMwNyAxMTEuODU4IDIwLjY0NTFDMTExLjg1OCAxNy4zMTg3IDExMC4wNjUgMTQuNzkxNSAxMDcuMTI3IDE0Ljc5MTVDMTA1LjYxNSAxNC43OTE1IDEwNC41MzUgMTUuNDYxMSAxMDMuNzc5IDE2LjQ1NDdIMTAzLjcxNFYxNS4xMTU1SDEwMC4zNDVWMjkuODI1MVpNMTA2LjEzNCAyMy43OTg3QzEwNC42MjIgMjMuNzk4NyAxMDMuNzU4IDIyLjU2NzUgMTAzLjc1OCAyMC43NzQ3QzEwMy43NTggMTguOTgxOSAxMDQuNTM1IDE3LjYyMTEgMTA2LjA2OSAxNy42MjExQzEwNy41ODEgMTcuNjIxMSAxMDguMjk0IDE4Ljg3MzkgMTA4LjI5NCAyMC43NzQ3QzEwOC4yOTQgMjIuNjUzOSAxMDcuNDczIDIzLjc5ODcgMTA2LjEzNCAyMy43OTg3WiIgZmlsbD0iIzM0MEUwRSIvPg0KPHBhdGggZD0iTTExNy41ODkgMjYuNTIwM0MxMjAuNDg0IDI2LjUyMDMgMTIyLjYyMiAyNS4yNjc1IDEyMi42MjIgMjIuODQ4M0MxMjIuNjIyIDIwLjAxODcgMTIwLjMzMyAxOS41MjE5IDExOC4zODkgMTkuMTk3OUMxMTYuOTg1IDE4LjkzODcgMTE1LjczMiAxOC44MzA3IDExNS43MzIgMTguMDUzMUMxMTUuNzMyIDE3LjM2MTkgMTE2LjQwMSAxNy4wMzc5IDExNy4yNjUgMTcuMDM3OUMxMTguMjM3IDE3LjAzNzkgMTE4LjkwNyAxNy4zNDAzIDExOS4wMzcgMTguMzMzOUgxMjIuMjc3QzEyMi4xMDQgMTYuMTUyMyAxMjAuNDE5IDE0Ljc5MTUgMTE3LjI4NyAxNC43OTE1QzExNC42NzMgMTQuNzkxNSAxMTIuNTEzIDE2LjAwMTEgMTEyLjUxMyAxOC4zMzM5QzExMi41MTMgMjAuOTI1OSAxMTQuNTY1IDIxLjQ0NDMgMTE2LjQ4OCAyMS43NjgzQzExNy45NTcgMjIuMDI3NSAxMTkuMjk2IDIyLjEzNTUgMTE5LjI5NiAyMy4xMjkxQzExOS4yOTYgMjMuODQxOSAxMTguNjI2IDI0LjIzMDcgMTE3LjU2OCAyNC4yMzA3QzExNi40MDEgMjQuMjMwNyAxMTUuNjY3IDIzLjY5MDcgMTE1LjUzNyAyMi41ODkxSDExMi4yMTFDMTEyLjMxOSAyNS4wMjk5IDExNC4zNDkgMjYuNTIwMyAxMTcuNTg5IDI2LjUyMDNaIiBmaWxsPSIjMzQwRTBFIi8+DQo8cGF0aCBkPSJNMTI3LjQwNSAyNi40OTg0QzEyOC45MzggMjYuNDk4NCAxMjkuOTEgMjUuODkzNiAxMzAuNzEgMjQuODEzNkgxMzAuNzc0VjI2LjE3NDRIMTM0LjE0NFYxNS4xMTUySDEzMC42MjNWMjEuMjkyOEMxMzAuNjIzIDIyLjYxMDQgMTI5Ljg4OSAyMy41MTc2IDEyOC42NzkgMjMuNTE3NkMxMjcuNTU2IDIzLjUxNzYgMTI3LjAxNiAyMi44NDggMTI3LjAxNiAyMS42Mzg0VjE1LjExNTJIMTIzLjUxN1YyMi4zNzI4QzEyMy41MTcgMjQuODM1MiAxMjQuODU2IDI2LjQ5ODQgMTI3LjQwNSAyNi40OTg0WiIgZmlsbD0iIzM0MEUwRSIvPg0KPHBhdGggZD0iTTEzNS42NzUgMjYuMTc0N0gxMzkuMTk2VjE5Ljk3NTVDMTM5LjE5NiAxOC42NTc5IDEzOS44NDQgMTcuNzI5MSAxNDAuOTQ1IDE3LjcyOTFDMTQyLjAwNCAxNy43MjkxIDE0Mi41IDE4LjQyMDMgMTQyLjUgMTkuNjA4M1YyNi4xNzQ3SDE0Ni4wMjFWMTkuOTc1NUMxNDYuMDIxIDE4LjY1NzkgMTQ2LjY0OCAxNy43MjkxIDE0Ny43NzEgMTcuNzI5MUMxNDguODI5IDE3LjcyOTEgMTQ5LjMyNiAxOC40MjAzIDE0OS4zMjYgMTkuNjA4M1YyNi4xNzQ3SDE1Mi44NDdWMTguOTgxOUMxNTIuODQ3IDE2LjQ5NzkgMTUxLjU5NCAxNC43OTE1IDE0OS4wODggMTQuNzkxNUMxNDcuNjYzIDE0Ljc5MTUgMTQ2LjQ3NSAxNS4zOTYzIDE0NS42MTEgMTYuNzM1NUgxNDUuNTY4QzE0NS4wMDYgMTUuNTQ3NSAxNDMuOTA0IDE0Ljc5MTUgMTQyLjQ1NyAxNC43OTE1QzE0MC44NTkgMTQuNzkxNSAxMzkuOCAxNS41NDc1IDEzOS4xMDkgMTYuNjkyM0gxMzkuMDQ0VjE1LjExNTVIMTM1LjY3NVYyNi4xNzQ3WiIgZmlsbD0iIzM0MEUwRSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xOC42MTU3IDM2Ljk3NDZDMjguNTU2OSAzNi45NzQ2IDM2LjYxNTcgMjguOTE1NyAzNi42MTU3IDE4Ljk3NDZDMzYuNjE1NyA5LjAzMzQ5IDI4LjU1NjkgMC45NzQ2MDkgMTguNjE1NyAwLjk3NDYwOUM4LjY3NDU4IDAuOTc0NjA5IDAuNjE1NzIzIDkuMDMzNDkgMC42MTU3MjMgMTguOTc0NkMwLjYxNTcyMyAyOC45MTU3IDguNjc0NTggMzYuOTc0NiAxOC42MTU3IDM2Ljk3NDZaTTI0LjIzMTEgOS4zNTk3N0MyNC41MDQ0IDguMzg4ODUgMjMuNTYyMiA3LjgxNDczIDIyLjcwMTcgOC40Mjc3OEwxMC42ODk1IDE2Ljk4NTJDOS43NTYzMiAxNy42NTAxIDkuOTAzMTEgMTguOTc0NiAxMC45MSAxOC45NzQ2SDE0LjA3MzJWMTguOTUwMUgyMC4yMzhMMTUuMjE0OCAyMC43MjI1TDEzLjAwMDQgMjguNTg5NUMxMi43MjcgMjkuNTYwNCAxMy42NjkyIDMwLjEzNDUgMTQuNTI5NyAyOS41MjE0TDI2LjU0MTkgMjAuOTY0QzI3LjQ3NTIgMjAuMjk5MiAyNy4zMjgzIDE4Ljk3NDYgMjYuMzIxNCAxOC45NzQ2SDIxLjUyNDZMMjQuMjMxMSA5LjM1OTc3WiIgZmlsbD0iI0Y1ODQxRiIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzFfMjI1NCI+DQo8cmVjdCB3aWR0aD0iMTUzIiBoZWlnaHQ9IjM2LjkiIGZpbGw9IndoaXRlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDAuODUwMDk4KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"></a>
+            </td></tr>
+            <tr><td data-source="adresa" colspan="2">Masarykova 3, 460 01 Liberec 1</td></tr>
+            <tr><td colspan="2"><a data-source="web" data-type="https://" data-attrsource="web" href="http://logoipsum.cz/" target="_blank" style="color: #F5841F;">www.logoipsum.cz</a></td></tr>
+            <tr style="display: block; margin-top: 0.5em;">
+              <td style="display: inline-block; margin-right: 1em;"><a href="#" target="_blank" style="display: inline-block;"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyMSAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOS43MjI1IDMuMTE3NUMxOS42MTg2IDIuNzAyMjMgMTkuNDA2OSAyLjMyMTc1IDE5LjEwODggMi4wMTQ0OEMxOC44MTA4IDEuNzA3MjEgMTguNDM2OSAxLjQ4NDA0IDE4LjAyNSAxLjM2NzVDMTYuNTIgMSAxMC41IDEgMTAuNSAxQzEwLjUgMSA0LjQ4MDAxIDEgMi45NzUwMSAxLjQwMjVDMi41NjMxIDEuNTE5MDQgMi4xODkyNCAxLjc0MjIxIDEuODkxMTkgMi4wNDk0OEMxLjU5MzE0IDIuMzU2NzUgMS4zODE0NSAyLjczNzIzIDEuMjc3NTEgMy4xNTI1QzEuMDAyMDcgNC42Nzk4NiAwLjg2NzM0MyA2LjIyOTI3IDAuODc1MDEyIDcuNzgxMjVDMC44NjUxOTQgOS4zNDQ5MSAwLjk5OTkzNCAxMC45MDYxIDEuMjc3NTEgMTIuNDQ1QzEuMzkyMSAxMi44NDc0IDEuNjA4NTMgMTMuMjEzNCAxLjkwNTg5IDEzLjUwNzdDMi4yMDMyNSAxMy44MDIgMi41NzE0OCAxNC4wMTQ2IDIuOTc1MDEgMTQuMTI1QzQuNDgwMDEgMTQuNTI3NSAxMC41IDE0LjUyNzUgMTAuNSAxNC41Mjc1QzEwLjUgMTQuNTI3NSAxNi41MiAxNC41Mjc1IDE4LjAyNSAxNC4xMjVDMTguNDM2OSAxNC4wMDg1IDE4LjgxMDggMTMuNzg1MyAxOS4xMDg4IDEzLjQ3OEMxOS40MDY5IDEzLjE3MDcgMTkuNjE4NiAxMi43OTAzIDE5LjcyMjUgMTIuMzc1QzE5Ljk5NTggMTAuODU5MSAyMC4xMzA1IDkuMzIxNTQgMjAuMTI1IDcuNzgxMjVDMjAuMTM0OCA2LjIxNzU5IDIwLjAwMDEgNC42NTYzNiAxOS43MjI1IDMuMTE3NVYzLjExNzVaIiBzdHJva2U9IiNGNTg0MUYiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4NCjxwYXRoIGQ9Ik04LjUzMTI1IDEwLjY0MjRMMTMuNTYyNSA3Ljc4MTE3TDguNTMxMjUgNC45MTk5MlYxMC42NDI0WiIgc3Ryb2tlPSIjRjU4NDFGIiBzdHJva2Utd2lkdGg9IjEuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+DQo8L3N2Zz4NCg==" style="display: inline-block;" alt="Ikona sítě YouTube"></a></td>
+              <td style="display: inline-block;"><a href="#" target="_blank" style="display: inline-block;"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxOSAxOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xMyA2LjVDMTQuMzkyNCA2LjUgMTUuNzI3NyA3LjA1MzEyIDE2LjcxMjMgOC4wMzc2OUMxNy42OTY5IDkuMDIyMjYgMTguMjUgMTAuMzU3NiAxOC4yNSAxMS43NVYxNy44NzVIMTQuNzVWMTEuNzVDMTQuNzUgMTEuMjg1OSAxNC41NjU2IDEwLjg0MDggMTQuMjM3NCAxMC41MTI2QzEzLjkwOTIgMTAuMTg0NCAxMy40NjQxIDEwIDEzIDEwQzEyLjUzNTkgMTAgMTIuMDkwOCAxMC4xODQ0IDExLjc2MjYgMTAuNTEyNkMxMS40MzQ0IDEwLjg0MDggMTEuMjUgMTEuMjg1OSAxMS4yNSAxMS43NVYxNy44NzVINy43NVYxMS43NUM3Ljc1IDEwLjM1NzYgOC4zMDMxMiA5LjAyMjI2IDkuMjg3NjkgOC4wMzc2OUMxMC4yNzIzIDcuMDUzMTIgMTEuNjA3NiA2LjUgMTMgNi41VjYuNVoiIHN0cm9rZT0iI0Y1ODQxRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KPHBhdGggZD0iTTQuMjUgNy4zNzVIMC43NVYxNy44NzVINC4yNVY3LjM3NVoiIHN0cm9rZT0iI0Y1ODQxRiIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KPHBhdGggZD0iTTIuNSA0Ljc1QzMuNDY2NSA0Ljc1IDQuMjUgMy45NjY1IDQuMjUgM0M0LjI1IDIuMDMzNSAzLjQ2NjUgMS4yNSAyLjUgMS4yNUMxLjUzMzUgMS4yNSAwLjc1IDIuMDMzNSAwLjc1IDNDMC43NSAzLjk2NjUgMS41MzM1IDQuNzUgMi41IDQuNzVaIiBzdHJva2U9IiNGNTg0MUYiIHN0cm9rZS13aWR0aD0iMS4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4NCjwvc3ZnPg0K" style="display: inline-block;" alt="Ikona sítě LinkedIn"></a></td>
+            </tr>
+          </tfoot>
+        </table>
+    </main>
+    <div class="page__source">
+        <pre id="source-code">
+
+        </pre>
+        <button id="clipboardcopy" class="btn btn--thin">Zkopírovat do schránky</button>
+    </div>
+</body>
+</html>

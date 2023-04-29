@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+.heading {
+  font-weight: bold;
+}
+.heading--large {
+  font-size: calc(1em + 1vw);
+}
+
+/* button */
+.btn {
+  display: inline-block;
+  padding: 1em 2em;
+  margin-top: 2em;
+  text-decoration: none;
+  background-color: var(--primary);
+  color: var(--light);
+  border: none;
+  border-radius: 2em;
+}
+.btn--thin {
+  padding: 0.75em 1.25em;
+  font-size: 0.9em;
+}
+.btn:hover {
+  text-decoration: underline;
+  border: 1px solid currentColor;
+  color: var(--primary);
+  cursor: pointer;
+  background-color: transparent;
+}
+.color--primary {
+  color: var(--primary);
+}
+
+/* page */
+.page__header {
+  text-align: center;
+}
+.page__logo {
+  display: inline-block;
+}
+.page__logo > span {
+  display: none;
+}
+.page__logo::before {
+  content: "";
+  display: block;
+  background-image: url(../images/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 7em;
+  height: 2em;
+}
