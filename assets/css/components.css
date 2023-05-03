@@ -4,6 +4,10 @@
 .heading--large {
   font-size: calc(1em + 1vw);
 }
+figure {
+  margin: 0;
+  padding: 0;
+}
 
 /* button */
 .btn {
@@ -34,6 +38,7 @@
 /* page */
 .page__header {
   text-align: center;
+  padding: 2em;
 }
 .page__logo {
   display: inline-block;
