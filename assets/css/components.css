@@ -8,7 +8,7 @@
   font-size: calc(1em + 0.25vw);
   color: var(--light);
 }
-figure {
+figure, p {
   margin: 0;
   padding: 0;
 }
