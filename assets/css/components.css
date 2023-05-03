@@ -4,9 +4,18 @@
 .heading--large {
   font-size: calc(1em + 1vw);
 }
+.slider__heading {
+  font-size: calc(1em + 0.25vw);
+  color: var(--light);
+}
 figure {
   margin: 0;
   padding: 0;
+}
+.img-responsive {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* button */
