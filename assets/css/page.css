@@ -36,6 +36,12 @@
   .slider__item {
     position: relative;
     min-height: 400px;
+    overflow: hidden;
+  }
+  .slider-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .slider-view__front {
     background-repeat: no-repeat;
@@ -44,6 +50,13 @@
     min-height: inherit;
   }
   .slider-view__description {
+    width: max-content;
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--primary);
+  }
+
+  /* .slider-view__description {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,8 +65,22 @@
     font-size: 3em;
     font-weight: bold;
     color: var(--primary);
+  } */
+  
+  .slider-view__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    overflow: hidden;
+    background-color: var(--dark);
   }
   .slider-view__back > .slider-view__description {
+    position: absolute;
+    left: 0;
     color: var(--light);
+    width: 1000px;
   }
 }
