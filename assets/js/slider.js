@@ -1,12 +1,14 @@
-let backViewContainer;
+let viewOverlay;
+let sliderItem;
 
 document.addEventListener("DOMContentLoaded", () => {
-    backViewContainer = document.querySelector(".slider-view__back");
-    backViewContainer.addEventListener("mousemove", mouseMoved);
+    sliderItem = document.querySelector(".slider__item");
+    viewOverlay = document.querySelector(".slider-view__back");
+
+    sliderItem.addEventListener("mousemove", mouseMoved);
 });
 
 function mouseMoved(e) {
-    const positionHorizontal = e.offsetX;
-    
-    backViewContainer.style.width = positionHorizontal + "px";
+    const positionX = e.offsetX;
+    viewOverlay.style.width = positionX + "px";
 }
