@@ -13,32 +13,57 @@
   </head>
 <body class="page">
     <header class="page__header">
-      <a href="./" class="page__logo"><span>Logoipsum</span></a>
-      <h1 class="heading heading--large">Slider claimů <span class="color--primary">Logoipsum</span></h1>
+      <a href="./" class="page__logo"><span>Ekonomická fakulta Technické univerzity v Liberci</span></a>
+      <h1 class="heading heading--large">Slider benefitů studia <span class="color--primary">EF TUL</span></h1>
     </header>
     <main class="page__content">
 
       <div class="slider">
         <div class="slider__title">
-          <p class="heading slider__heading">Firemní benefit</p>
+          <p class="heading slider__heading"><span id="slide-counter">#1</span>Benefity studia</p>
         </div>
         <div class="slider__item">
-          <div class="slider-view slider-view__front" style="background-image: linear-gradient(to right bottom, rgb(43,43,43), rgba(43,43,43,0.75)), url(./assets/images/view-front.jpg);">
+          <div class="slider-view slider-view__front" style="background-image: linear-gradient(to right bottom, rgb(43,43,43), rgba(43,43,43,0.5)), url(./assets/images/vyjezdy.jpg);">
             <div class="slider-view__description">
-              <p>Text benefitu ve initial pohledu.</p>
+              <p>Neučíme se anglicky jenom z učebnice.</p>
             </div>
           </div>
           <div class="slider-view slider-view__back">
               <div class="slider-view__description">
-                <p>Text benefitu po přejetí.</p>
+                <p>Jezdíme na zahraniční stáže.</p>
               </div>
           </div>
         </div>
-
-        <div class="slider__controls">
-          <a href="#" class="btn ">Další benefit</a>
+        <div class="slider__item">
+          <div class="slider-view slider-view__front" style="background-image: linear-gradient(to right bottom, rgb(43,43,43), rgba(43,43,43,0.5)), url(./assets/images/prednasky.jpg);">
+            <div class="slider-view__description">
+              <p>Neusínáme u poslechu přednášek.</p>
+            </div>
+          </div>
+          <div class="slider-view slider-view__back">
+              <div class="slider-view__description">
+                <p>Vybíráme ty nejlepší řečníky z praxe.</p>
+              </div>
+          </div>
         </div>
+        <div class="slider__item">
+          <div class="slider-view slider-view__front" style="background-image: linear-gradient(to right bottom, rgb(43,43,43), rgba(43,43,43,0.5)), url(./assets/images/prednasky.jpg);">
+            <div class="slider-view__description">
+              <p>Neusínáme u poslechu přednášek.</p>
+            </div>
+          </div>
+          <div class="slider-view slider-view__back">
+              <div class="slider-view__description">
+                <p>Vybíráme ty nejlepší řečníky z praxe.</p>
+              </div>
+          </div>
+        </div>
+        <div class="slider__controls">
+          <a href="#" id="next-slide" class="btn">Další benefit</a>
+        </div>
+        
       </div>
+      
     </main>
 </body>
 </html>

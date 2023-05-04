@@ -6,7 +6,8 @@
   :root {
     --light: #ffffff;
     --dark: #2b2b2b;
-    --primary: #f5841f;
+    --black: #000;
+    --primary: #65A812;
     --border: #cccccc;
   }
   html {
@@ -33,10 +34,16 @@
     z-index: 1;
     padding: 3em 1em 0 1em;
   }
+  #slide-counter {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
   .slider__item {
     position: relative;
     min-height: 400px;
     overflow: hidden;
+    display: none;
   }
   .slider-view {
     display: flex;
@@ -73,14 +80,15 @@
     left: 0;
     bottom: 0;
     right: 0;
-    width: 20%;
+    width: 10%;
     overflow: hidden;
-    background-color: var(--dark);
+    background-color: var(--black);
   }
   .slider-view__back > .slider-view__description {
     position: absolute;
     left: 0;
+    display: inline-block;
+    width: 1200px;
     color: var(--light);
-    width: 1000px;
   }
 }
