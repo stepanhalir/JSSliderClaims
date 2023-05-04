@@ -7,7 +7,7 @@
     --light: #ffffff;
     --dark: #2b2b2b;
     --black: #000;
-    --primary: #65A812;
+    --primary: #ea7603;
     --border: #cccccc;
   }
   html {
@@ -80,7 +80,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    width: 10%;
+    width: 0;
     overflow: hidden;
     background-color: var(--black);
   }
