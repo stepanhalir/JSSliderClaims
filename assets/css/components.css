@@ -8,7 +8,7 @@
   font-size: calc(1em + 0.25vw);
   color: var(--light);
 }
-figure, p {
+figure, p, menu {
   margin: 0;
   padding: 0;
 }
@@ -17,12 +17,14 @@ figure, p {
   height: 100%;
   object-fit: cover;
 }
+menu > li {
+  list-style-type: none;
+}
 
 /* button */
 .btn {
   display: inline-block;
   padding: 1em 2em;
-  margin-top: 2em;
   text-decoration: none;
   background-color: var(--primary);
   color: var(--light);

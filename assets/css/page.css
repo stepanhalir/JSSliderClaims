@@ -1,4 +1,4 @@
-@layer reset, page, components;
+@layer reset, components, page;
 @import url(normalize.css) layer(reset);
 @import url(components.css) layer(components);
 
@@ -73,7 +73,7 @@
     font-weight: bold;
     color: var(--primary);
   } */
-  
+
   .slider-view__back {
     position: absolute;
     top: 0;
@@ -87,8 +87,34 @@
   .slider-view__back > .slider-view__description {
     position: absolute;
     left: 0;
+    top: 50%;
+    transform: translate(0,-50%);
     display: inline-block;
     width: 1200px;
     color: var(--light);
+  }
+
+  /* Controls */
+  .controls__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1em;
+  }
+  .controls__dots > li {
+    
+  }
+  .controls__dots .dot {
+    padding: 0;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 1px solid var(--primary);
+    background-color: unset;
+    border-radius: 50%;
+  }
+  .controls__dots .dot:hover {
+    background-color: var(--primary);
   }
 }

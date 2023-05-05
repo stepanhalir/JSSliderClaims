@@ -1,21 +1,29 @@
-let slider;
-let slideOverlay;
-let sliderItems;
-let nextSlideBtn;
-let currentSlide;
+let slider
+let slideOverlay
+let sliderItems
+let currentSlide
+let nextSlideBtn
+let controlsDots
 
 document.addEventListener("DOMContentLoaded", () => {
     slider = document.querySelector(".slider")
     sliderItems = document.querySelectorAll(".slider__item")
     slideOverlay = document.querySelector(".slider-view__back")
     nextSlideBtn = document.getElementById("next-slide")
+    controlsDots = document.querySelectorAll(".dot");
 
     for (const item of sliderItems) {
         item.addEventListener("mousemove", mouseMoved)
     }
 
     currentSlide = 0;
-    nextSlideBtn.addEventListener("click", slideMoved)
+
+    // nextSlideBtn.addEventListener("click", slideMoved)
+    nextSlideBtn.addEventListener("click", (e) => {
+        e.preventDefault()
+        slideMoved()
+    })
+
     sliderItems[0].style.display = "block"
 });
 
@@ -25,7 +33,7 @@ function mouseMoved(e) {
     console.log(positionX)
     console.log(e.currentTarget)
     
-    //Aplikace šířky na konrétního potomka
+    //Aplikace šířky overlay na konkrétního potomka
     slideOverlay = e.currentTarget.querySelector(".slider-view__back")
     slideOverlay.style.width = positionX + "px"
 }
@@ -34,6 +42,8 @@ function mouseMoved(e) {
 function slideMoved(e) {
     //Vyresetování pohybu overlay
     slideOverlay.style.width = 0 + "px"
+    //Reset chování
+    // e.preventDefault()
 
     sliderItems[currentSlide].style.display = "none"
     currentSlide++
@@ -48,4 +58,4 @@ function slideMoved(e) {
 }
 
 //Automatický posun slide
-// setInterval(slideMoved, 3000)
+setInterval(slideMoved, 3000)
