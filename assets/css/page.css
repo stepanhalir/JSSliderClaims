@@ -33,6 +33,7 @@
     right: 0;
     z-index: 1;
     padding: 3em 1em 0 1em;
+    pointer-events: none;
   }
   #slide-counter {
     display: block;
@@ -55,6 +56,7 @@
     background-size: cover;
     background-position: center;
     min-height: inherit;
+    pointer-events: none;
   }
   .slider-view__description {
     width: max-content;

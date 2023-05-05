@@ -58,4 +58,4 @@ function slideMoved(e) {
 }
 
 //Automatický posun slide
-setInterval(slideMoved, 3000)
+// setInterval(slideMoved, 3000)
